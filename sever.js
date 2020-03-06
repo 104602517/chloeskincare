@@ -65,9 +65,9 @@ app.post('/che/new', passport.authenticate('token', {session: false}),(req, res)
 })
 // @取得資料庫中所有化學物質
 // @Public
-app.get('/che', (req, res) => {
+app.post('/che', (req, res) => {
 	che.find().then(result => {
-		res.json(result)
+		res.json(result);
 	})
 })
 // @新增保養品
