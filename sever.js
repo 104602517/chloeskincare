@@ -58,8 +58,10 @@ app.post('/che/new', passport.authenticate('token', {session: false}),(req, res)
 	newChe.save((che, err) => {
 		if (err) {
 			console.log(err);
+			res.json({});
 		} else {
 			console.log(che);
+			res.json({});
 		}
 	})
 })
